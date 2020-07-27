@@ -6,7 +6,12 @@
     - [Create new DB](#create-new-db)
     - [Create admin role for new DB](#create-admin-role-for-new-db)
     - [Role membership](#role-membership)
+    - [Connect](#connect)
+    - [Creating a New Table](#creating-a-new-table)
 - [References](#references)
+    - [DB Management Tools](#db-management-tools)
+
+  - [DB Management Tools](#db-management-tools)
 
 - [x] Installation
 - [x] Postgresql Cheatsheet
@@ -32,7 +37,6 @@ psql
 sudo -u postgres psql
 ```
 
-
 ## Postgresql cheatsheet
 
 **Specification**
@@ -47,6 +51,7 @@ Todo:
 - [ ] Define entity in system
 - [ ] Create tables and relations
 - [ ] Create procedures
+- [ ] DB Management Tools
 - [ ] Benchmark tools
 
 ### Create new DB
@@ -78,8 +83,24 @@ ALTER ROLE mycourse WITH PASSWORD '123456';
 
 ['Cheat Sheet'](./cheatsheet.md);
 
+### Connect
+
+> psql postgresql://{role}:{password}@{host}:{port}/{db}
+
+```bash
+psql postgresql://mycourse:123456@localhost:5432/mycourse
+```
+
+### Creating a New Table
+
+- [Datatypes](https://www.postgresql.org/docs/12/datatype.html)
+
 # References
 
 - https://www.postgresql.org/docs/12/index.html
 - https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-ubuntu-18-04
 - https://www.postgresqltutorial.com/
+
+### DB Management Tools
+
+- [pgadmin4](https://www.pgadmin.org/download/pgadmin-4-python/)
